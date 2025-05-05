@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Araçlar | Güpçen Auto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to bottom, #000428, #004e92);
+      color: white;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #001F3F;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+    }
+    .car {
+      background-color: #012a4a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+    .car:hover {
+      transform: translateY(-5px);
+    }
+    .car img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .car-content {
+      padding: 15px;
+    }
+    .car-content h3 {
+      margin: 0 0 10px;
+    }
+    .car-content a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #0074D9;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .car-content a:hover {
+      background-color: #005fa3;
+    }
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Daha küçük ekranlarda 2 öğe */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr; /* Çok küçük ekranlarda tek öğe */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="logo.png" alt="Güpçen Auto Logo">
+  </a>
+  <nav>
+    <a href="araclar.html">Araçlar</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+  </nav>
+</header>
+
+<section class="gallery">
+  <div class="car">
+    <img src="https://www.otomobil.com.tr/wp-content/uploads/2020/08/Yeni-BMW-5-Serisi-%C3%96n.jpg" alt="BMW">
+    <div class="car-content">
+      <h3>BMW 520d - 2020</h3>
+      <a href="https://www.sahibinden.com/bmw-5-serisi?query_text_mf=BMW+520d+-+2020&query_text=-+2020" target="_blank">Sahibinden'de Gör</a>
+    </div>
+  </div>
+  
+<div class="car">
+    <img src="https://pic.otoyazar.com/wp-content/uploads/2018/06/Audi-A4.jpg" alt="Audi">
+    <div class="car-content">
+      <h3>Audi A4 - 2019</h3>
+      <a href="https://www.sahibinden.com/vasita?query_text_mf=Audi+A4+-+2019&query_text=Audi+A4+-+2019" target="_blank">Sahibinden'de Gör</a>
+    </div>
+  </div>
+
+<div class="car">
+    <img src="https://ares.shiftdelete.net/2021/11/2021-mercedes-c-1.jpg" alt="Mercedes">
+    <div class="car-content">
+      <h3>Mercedes C 200 - 2021</h3>
+      <a href="https://www.sahibinden.com/mercedes-benz-c-serisi-c-200?query_text_mf=Mercedes+C+200+-+2021&query_text=Mercedes+-+2021" target="_blank">Sahibinden'de Gör</a>
+    </div>
+</div>
+
+<div class="car">
+  <img src="https://i0.shbdn.com/photos/98/42/97/x5_1200984297bui.jpg" alt="Hyundai">
+  <div class="car-content">
+    <h3>Hyundai i20 2018</h3>
+    <a href="https://www.sahibinden.com/vasita?query_text_mf=i20+2018&query_text=i20+2018" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://www.arabateknikbilgi.com/wp-content/uploads/2020/11/ArabaTeknikBilgi-2005-2008-Opel-Vectra-1.9-CDTI-1.jpg" alt="Opel">
+  <div class="car-content">
+    <h3>Opel Vectra 2005</h3>
+    <a href="https://www.sahibinden.com/opel-vectra?a5_max=2005&a5_min=2005&query_text_mf=opel+vectra+2005+c+kasa&query_text=c+kasa" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2010_Volkswagen_Passat_Highline_TDi_140_2.0_Front.jpg/960px-2010_Volkswagen_Passat_Highline_TDi_140_2.0_Front.jpg" alt="WV">
+  <div class="car-content">
+    <h3>VW Passat B6</h3>
+    <a href="https://www.sahibinden.com/vasita?query_text_mf=passat+b6&query_text=passat+b6" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="./felicia.jpg" alt="Skoda">
+  <div class="car-content">
+    <h3>Skoda Felicia 2001</h3>
+    <a href="https://www.sahibinden.com/skoda-felicia-1.3" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://i0.shbdn.com/photos/04/50/29/x5_1209045029904.jpg" alt="Peugeot">
+  <div class="car-content">
+    <h3>Peugeot Bipper 2012</h3>
+    <a href="https://www.sahibinden.com/vasita?query_text_mf=peugeot+bipper+2012&query_text=peugeot+bipper+2012" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="./focus.jpg" alt="Ford">
+  <div class="car-content">
+    <h3>Ford Focus</h3>
+    <a href="https://www.sahibinden.com/ford-focus-1.6-collection" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://static.ticimax.cloud/13285/Uploads/EditorUploads/BMW_2_Serisi%20Coupe_lastikTR.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>BMW 2 Serisi 218i</h3>
+    <a href="https://www.sahibinden.com/bmw-2-serisi-218i-gran-coupe-first-edition-sport-line" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://www.galleriatr.com/B2ELResim/AracResim2El/391/16857080-3b25-44a6-a77f-1a2dce57e181_Buyuk.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>BMW 5 Serisi 520i</h3>
+    <a href="https://www.sahibinden.com/bmw-5-serisi-520i" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tofa%C5%9F_Kartal_SLX_red.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Tofaş Kartal SLX</h3>
+    <a href="https://www.sahibinden.com/tofas-kartal-slx" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://www.arabalar.com.tr/wp-content/uploads/2024/05/Peugeot-307-2005-1280-0b-fiyat-donanim.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Peugeot 307</h3>
+    <a href="https://www.sahibinden.com/peugeot-307" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://arbstorage.mncdn.com/ilanfotograflari/2025/04/27/29272027/7d11ee8d-c3eb-498c-9a9b-24201ce5daa2_image_for_silan_29272027_1920x1080.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Volkswagen Passat Exclusive Sunroof</h3>
+    <a href="https://www.sahibinden.com/volkswagen-passat-1.6-tdi-bluemotion-exclusive" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://www.otomol.com/B2ELResim/AracResim2El/6623/fb6db722-1be2-461a-a932-5ca35bf4009c_Buyuk.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Fiat Egea 1.6</h3>
+    <a href="https://www.sahibinden.com/fiat-egea-1.6-multijet" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Toyota_Corolla_Limousine_Hybrid_Genf_2019_1Y7A5576.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Toyota Corolla</h3>
+    <a href="https://www.sahibinden.com/toyota-corolla" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://cdn1.ntv.com.tr/gorsel/VCul8ampQ0azZ9ufb6TfLA.jpg?width=1080&mode=crop&scale=both" alt="rb-19">
+  <div class="car-content">
+    <h3>Renault Fluence</h3>
+    <a href="https://www.sahibinden.com/renault-fluence" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://www.teknoblog.com/wp-content/uploads/2024/01/yeni-volkswagen-golf-ve-golf-gti-resmi-olarak-tanitildi-3.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Volkswagen Golf</h3>
+    <a href="https://www.sahibinden.com/volkswagen-golf" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://static.daktilo.com/sites/71/uploads/2024/04/30/2024-skoda-superbnin-yeni-fiyati-dikkat-cekiyor-iste-ozellikleri-ve-yakit-tuketimi54.webp" alt="rb-19">
+  <div class="car-content">
+    <h3>Skoda Superb</h3>
+    <a href="https://www.sahibinden.com/skoda-superb" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://octane.rent/wp-content/uploads/2024/03/renault-megane-e-tech-red-2.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Renault Megane E-Tech</h3>
+    <a href="https://www.sahibinden.com/renault-megane-e-tech" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+<div class="car">
+  <img src="https://i.tgrthaber.com/images/haberler/24-05/29/ilk-hibrit-porsche-911-piyasaya-cikti-iste-merakla-beklenen-aracin-ozellikleri-17169768453949.jpg" alt="rb-19">
+  <div class="car-content">
+    <h3>Porsche 911</h3>
+    <a href="https://www.sahibinden.com/porsche-911" target="_blank">Sahibinden'de Gör</a>
+  </div>
+</div>
+
+
+
+</section>
+
+</body>
+</html>

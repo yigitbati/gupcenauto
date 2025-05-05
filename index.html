@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GÜPCEN AUTO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to bottom, #000428, #004e92);
+      color: white;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #001F3F;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+    }
+    .cars-section, .brands-section, .vehicle-tabs, .mission-vision {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .car-card {
+      background-color: #012a4a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+    .car-card:hover {
+      transform: translateY(-5px);
+    }
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .car-card .info {
+      padding: 15px;
+    }
+    .car-card .info h3 {
+      margin: 0 0 10px;
+    }
+
+    /* Brands Carousel */
+    .brands-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .brands-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .brand-item {
+      min-width: 180px;
+      margin-right: 20px;
+      background-color: #012a4a;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .brand-item img {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+      background-color: #fff;
+      padding: 10px;
+    }
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .carousel-controls button {
+      background-color: #004e92;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      margin: 0 10px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    /* Tabs */
+    .tab-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .tab-buttons button {
+      background-color: #003f7f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .tab-buttons button.active {
+      background-color: #005fbf;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    /* Mission & Vision */
+    .mission-vision h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .mission-vision p {
+      max-width: 800px;
+      margin: 10px auto 30px;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="logo.png" alt="Güpçen Auto Logo">
+  </a>
+  <nav>
+    <a href="araclar.html">Araçlar</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>GÜPCEN AUTO</h1>
+  <p>Güvenilir ve hızlı araç alım-satım hizmeti</p>
+</section>
+
+<!-- Popüler Araçlar -->
+<section class="cars-section">
+  <h2 style="text-align: center;">Popüler Araçlarımız</h2>
+  <div class="cars-grid">
+    <div class="car-card">
+      <img src="https://cdn.motor1.com/images/mgl/7kYYq/s3/bmw-5-series-rendering.webp" alt="BMW 5 Serisi">
+      <div class="info">
+        <h3>BMW 5 Serisi - 2020</h3>
+        <p>Full paket, 80.000 km, otomatik vites</p>
+      </div>
+    </div>
+    <div class="car-card">
+      <img src="https://www.arabazzi.com/images/haberler/audi-a4-2019-25-yila-ozel-makyaj59.jpg" alt="Audi A4">
+      <div class="info">
+        <h3>Audi A4 - 2019</h3>
+        <p>1.4 TFSI, 70.000 km, sunroof, tam bakımlı</p>
+      </div>
+    </div>
+    <div class="car-card">
+      <img src="https://www.arabahabercisi.com/wp-content/uploads/2021/03/2021-C-Serisi-fiyat%C4%B1-600x381.jpg" alt="Mercedes C">
+      <div class="info">
+        <h3>Mercedes C 200 - 2021</h3>
+        <p>AMG paket, 50.000 km, dizel, hatasız</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Markalarımız -->
+<section class="brands-section">
+  <h2>Markalarımız</h2>
+  <div class="brands-carousel" id="brandScroll">
+    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/960px-BMW.svg.png" alt="BMW"></div>
+    <div class="brand-item"><img src="https://images.seeklogo.com/logo-png/18/2/audi-logo-png_seeklogo-182367.png" alt="Audi"></div>
+    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2048px-Mercedes-Logo.svg.png" alt="Mercedes"></div>
+    <div class="brand-item"><img src="https://images.seeklogo.com/logo-png/15/2/volkswagen-logo-png_seeklogo-150527.png" alt="VW"></div>
+    <div class="brand-item"><img src="https://images.seeklogo.com/logo-png/5/2/ford-logo-png_seeklogo-56577.png" alt="Ford"></div>
+    <div class="brand-item"><img src="https://images.seeklogo.com/logo-png/17/2/toyota-logo-png_seeklogo-171947.png" alt="Toyota"></div>
+    <div class="brand-item"><img src="https://1000logos.net/wp-content/uploads/2021/02/Peugeot-logo.png" alt="Peugeot"></div>
+    <div class="brand-item"><img src="https://images.seeklogo.com/logo-png/6/2/hyundai-motor-company-logo-png_seeklogo-69075.png" alt="Hyundai"></div>
+    <div class="brand-item"><img src="https://static.cdnlogo.com/logos/p/13/porsche.png" alt="Porsche"></div>
+    <div class="brand-item"><img src="https://www.dolubrand.com/images/kategoriler/202009162502099872.png" alt="Tofaş"></div>
+  </div>
+  <div class="carousel-controls">
+    <button onclick="scrollBrands(-1)">◀</button>
+    <button onclick="scrollBrands(1)">▶</button>
+  </div>
+</section>
+
+<!-- Araç Sınıfları -->
+<section class="vehicle-tabs">
+  <h2 style="text-align: center;">Araç Sınıflarımız</h2>
+  <div class="tab-buttons">
+    <button onclick="showTab('sport')" class="active">Spor</button>
+    <button onclick="showTab('sedan')">Sedan</button>
+    <button onclick="showTab('hatchback')">Hatchback</button>
+    <button onclick="showTab('commercial')">Ticari</button>
+  </div>
+
+  <div id="sport" class="tab-content active">
+    <div class="car-card">
+      <img src="https://i.tgrthaber.com/images/haberler/24-05/29/ilk-hibrit-porsche-911-piyasaya-cikti-iste-merakla-beklenen-aracin-ozellikleri-17169768453949.jpg" alt="Porsche 911">
+      <div class="info">
+        <h3>Porsche 911 GT3 - 2022</h3>
+        <p>Sportif sürüş, 20.000 km, manuel</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="sedan" class="tab-content">
+    <div class="car-card">
+      <img src="https://cdn.motor1.com/images/mgl/7kYYq/s3/bmw-5-series-rendering.webp" alt="BMW 5 Serisi">
+      <div class="info">
+        <h3>BMW 5 Serisi - 2020</h3>
+        <p>Full paket, otomatik, 80.000 km</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="hatchback" class="tab-content">
+    <div class="car-card">
+      <img src="https://www.teknoblog.com/wp-content/uploads/2024/01/yeni-volkswagen-golf-ve-golf-gti-resmi-olarak-tanitildi-3.jpg" alt="Golf 8">
+      <div class="info">
+        <h3>Volkswagen Golf 8 - 2021</h3>
+        <p>1.5 TSI, 40.000 km, DSG</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="commercial" class="tab-content">
+    <div class="car-card">
+      <img src="https://i0.shbdn.com/photos/04/50/29/x5_1209045029904.jpg" alt="Peugeot Bipper">
+      <div class="info">
+        <h3>Peugeot Bipper - 2012</h3>
+        <p>140.000 km, dizel, uzun şase</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Misyon & Vizyon -->
+<section class="mission-vision">
+  <h2>Misyonumuz</h2>
+  <p>
+    Güpçen Auto olarak misyonumuz, müşterilerimize güvenilir, kaliteli ve uygun fiyatlı ikinci el araçlar sunarak,
+    onların beklentilerini en uygun şekilde karşılamaktır. Satış öncesi ve sonrası hizmetlerimizle, sektörde fark
+    yaratan bir deneyim sunmayı amaçlıyoruz.
+  </p>
+
+  <h2>Vizyonumuz</h2>
+  <p>
+    İkinci el otomotiv sektöründe lider bir marka haline gelerek, müşteri memnuniyetini en yüksek seviyeye çıkarmak ve
+    güvenilir bir marka algısı oluşturmak.
+  </p>
+</section>
+
+<script>
+  function scrollBrands(direction) {
+    const container = document.getElementById('brandScroll');
+    container.scrollLeft += direction * 200;
+  }
+
+  function showTab(tabId) {
+    const buttons = document.querySelectorAll('.tab-buttons button');
+    const contents = document.querySelectorAll('.tab-content');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    contents.forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
+
+
+
